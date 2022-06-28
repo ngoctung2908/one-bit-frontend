@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { App } from 'features/app/app'
 import reportWebVitals from './reportWebVitals'
 import './index.css'
+import 'assets/css/style.css'
 
 const container = document.getElementById('root')!
 const root = createRoot(container)
