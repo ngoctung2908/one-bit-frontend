@@ -1,10 +1,12 @@
 import Button from 'components/button/button'
 import { memo, FC } from 'react'
+import { HeadPanel } from './components/headPanel/headPanel'
 import { Tokenomics } from './components/tokenomics/tokenomics'
 
 export const LandingPage: FC = memo(() => {
   return (
-    <div className="text-primary-light-8">
+    <div className="text-primary-light-8 px-60 mt-48">
+      <HeadPanel />
       <Tokenomics />
     </div>
     // <div className="min-h-0 h-full flex flex-col p-2.5">
