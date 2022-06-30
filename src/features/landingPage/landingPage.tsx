@@ -1,9 +1,12 @@
 import Button from 'components/button/button'
 import { memo, FC } from 'react'
+import { Tokenomics } from './components/tokenomics/tokenomics'
 
 export const LandingPage: FC = memo(() => {
   return (
-    <div className="text-primary-light-8">Main content</div>
+    <div className="text-primary-light-8">
+      <Tokenomics />
+    </div>
     // <div className="min-h-0 h-full flex flex-col p-2.5">
     //   <span className="icon-activity-heart text-primary-50 text-2xl"></span>
     //   <div>
