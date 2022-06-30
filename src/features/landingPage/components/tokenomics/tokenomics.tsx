@@ -3,7 +3,7 @@ import { TokennomicsList } from './components/tokenomicsList/tokenomicsList'
 
 export const Tokenomics = () => {
   return (
-    <div>
+    <div className="mt-32">
       <div className=" font-bold text-base text-center text-accent-blue">
         TOKENOMICS
       </div>

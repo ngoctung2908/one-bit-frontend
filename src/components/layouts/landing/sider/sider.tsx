@@ -10,7 +10,7 @@ export const Sider = memo(() => {
   return (
     <div
       className={`pl-6 pr-4 py-8 border-solid border-neutral-8 border-r-[0.5px] items-stretch relative top-0 left-0 transition-all ${
-        isShowSider ? 'w-[323px]' : 'w-[128px]'
+        isShowSider ? '2xl:w-[323px] w-[270px]' : 'w-[128px]'
       }`}
     >
       <Link to="/">

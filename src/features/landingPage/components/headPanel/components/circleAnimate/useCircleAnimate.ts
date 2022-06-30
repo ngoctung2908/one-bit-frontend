@@ -12,6 +12,7 @@ export const useCircleAnimate = () => {
   const circelRef = useRef<any>()
   const [clientWidth, setClientWidth] = useState<number>(0)
   const [clientHeight, setClientHeight] = useState<number>(0)
+  const [isInit, setIsInit] = useState<boolean>(false)
 
   const getElementSize = () => {
     const width = circelRef?.current?.clientWidth
@@ -41,6 +42,7 @@ export const useCircleAnimate = () => {
       1,
       1000
     )
+
     camera.position.z = 400
     scene.add(camera)
 
@@ -88,6 +90,7 @@ export const useCircleAnimate = () => {
     scene.add(lights[2])
 
     window.addEventListener('resize', onWindowResize, false)
+    setIsInit(true)
   }
 
   const onWindowResize = () => {
@@ -111,17 +114,13 @@ export const useCircleAnimate = () => {
   // Get 'width' and 'height' after the initial render and every time the list changes
   useEffect(() => {
     getElementSize()
-    // if (clientWidth !== 0 && clientHeight !== 0) {
-    //   camera.aspect = clientWidth / clientHeight
-    //   camera.updateProjectionMatrix()
-    //   renderer.setSize(clientWidth, clientHeight)
-    // }
-  }, [clientWidth, clientHeight])
-
-  // Update 'width' and 'height' when the window resizes
-  useEffect(() => {
-    window.addEventListener('resize', getElementSize)
-  }, [])
+    if (clientWidth !== 0 && clientHeight !== 0 && camera !== undefined) {
+      camera.aspect = clientWidth / clientHeight
+      camera.updateProjectionMatrix()
+      renderer.setSize(clientWidth, clientHeight)
+      setIsInit(false)
+    }
+  }, [clientWidth, clientHeight, isInit])
 
   return { init, animate, circelRef }
 }
