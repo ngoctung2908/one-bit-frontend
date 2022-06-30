@@ -26,7 +26,7 @@ export const useCircleAnimate = () => {
     renderer.setPixelRatio(
       window.devicePixelRatio ? window.devicePixelRatio : 1
     )
-    console.log(clientWidth, clientHeight)
+
     renderer.setSize(clientWidth, clientHeight)
     renderer.autoClear = false
     renderer.setClearColor(0x000000, 0.0)
@@ -70,7 +70,7 @@ export const useCircleAnimate = () => {
     circle.add(planet)
 
     const planet2 = new THREE.Mesh(geom2, mat2)
-    planet2.scale.x = planet2.scale.y = planet2.scale.z = 15
+    planet2.scale.x = planet2.scale.y = planet2.scale.z = 10
     skelet.add(planet2)
 
     const ambientLight = new THREE.AmbientLight(0x999999)

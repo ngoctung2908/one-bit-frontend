@@ -5,7 +5,7 @@ import { Tokenomics } from './components/tokenomics/tokenomics'
 
 export const LandingPage: FC = memo(() => {
   return (
-    <div className="text-primary-light-8 px-60 mt-48">
+    <div className="text-primary-light-8 px-60">
       <HeadPanel />
       <Tokenomics />
     </div>

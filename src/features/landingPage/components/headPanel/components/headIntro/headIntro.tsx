@@ -2,7 +2,7 @@ import { memo } from 'react'
 
 export const HeadIntro = memo(() => {
   return (
-    <div>
+    <div className="flex flex-col justify-center">
       <h1 className="text-primary-light-8 text-[56px] leading-[72px] font-bold">
         Invest to create real values
       </h1>
