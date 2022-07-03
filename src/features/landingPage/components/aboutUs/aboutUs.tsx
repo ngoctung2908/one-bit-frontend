@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import launchPadPng from 'assets/images/launchpad.png'
 import insurancePng from 'assets/images/insurance.png'
 import incubatorePng from 'assets/images/incubator.png'
-import advertisingPng from 'assets/images/advertising.png'
+import vestingPng from 'assets/images/vesting.png'
 import Button from 'components/button/button'
 
 export const AboutUs = memo(() => {
@@ -94,7 +94,7 @@ export const AboutUs = memo(() => {
             More Detail
           </Button>
         </div>
-        <img src={advertisingPng} className="max-w-[473px]" alt="" />
+        <img src={vestingPng} className="max-w-[473px]" alt="" />
       </div>
     </div>
   )
