@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <!-- <meta name="theme-color" content="#000000" /> -->
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -33,8 +33,21 @@
     <title>OneBitPlatform</title>
   </head>
 
-  <body>
+  <body style="background: #0b0b22">
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div
+      id="bg"
+      style="
+        margin: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: blur(175px);
+      "
+    ></div>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -47,4 +60,96 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script src="./sketch.min.js"></script>
+  <script type="text/javascript">
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        // document ready
+        const body = document.body,
+          html = document.documentElement
+
+        const height = Math.max(
+          body.scrollHeight,
+          body.offsetHeight,
+          html.clientHeight,
+          html.scrollHeight,
+          html.offsetHeight
+        )
+        console.log(height)
+        const particles = [],
+          particleCount = Math.round(height / 500)
+        Particle = function (x, y) {
+          this.x = x
+          this.y = y
+          this.radius = random(10, 150)
+          const colors = [
+            'rgba(252,160,22)',
+            'rgba(252,22,91)',
+            'rgba(37,174,247)',
+            'rgba(96,22,252)',
+          ]
+          this.rgba = colors[(Math.random() * colors.length) | 0]
+          this.vx = random(-2, 2)
+          this.vy = random(-2, 2)
+
+          // Draw our particle to the canvas.
+          this.draw = function (ctx) {
+            ctx.fillStyle = this.rgba
+            ctx.beginPath()
+            ctx.arc(this.x, this.y, this.radius, 0, TWO_PI)
+            ctx.fill()
+          }
+
+          // Update our position.
+          this.update = function (ctx) {
+            this.x += this.vx
+            this.y += this.vy
+            // Bounce off edges.
+            if (this.x + this.radius > ctx.width) {
+              this.vx *= -1
+              this.x = ctx.width - this.radius
+            }
+            if (this.x - this.radius < 0) {
+              this.vx *= -1
+              this.x = this.radius
+            }
+            if (this.y + this.radius > ctx.height) {
+              this.vy *= -1
+              this.y = ctx.height - this.radius
+            }
+            if (this.y - this.radius < 0) {
+              this.vy *= -1
+              this.y = this.radius
+            }
+          }
+        }
+
+        const sketch = Sketch.create({
+          container: document.getElementById('bg'),
+          setup: function () {
+            let i = particleCount
+            while (i--) {
+              const p = new Particle(
+                random(0, this.width),
+                random(0, this.height)
+              )
+              particles.push(p)
+            }
+          },
+          update: function () {
+            let i = particleCount
+            while (i--) {
+              particles[i].update(this)
+            }
+          },
+          draw: function () {
+            let i = particleCount
+            while (i--) {
+              particles[i].draw(this)
+            }
+          },
+        })
+      }
+    }
+  </script>
 </html>

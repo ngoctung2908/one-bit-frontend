@@ -3,13 +3,19 @@ import { memo, FC } from 'react'
 import { HeadPanel } from './components/headPanel/headPanel'
 import { Tokenomics } from './components/tokenomics/tokenomics'
 import { News } from './components/news/news'
+import { Team } from './components/team/team'
+import { Feature } from './components/feature/feature'
+import { AboutUs } from './components/aboutUs/aboutUs'
 
 export const LandingPage: FC = memo(() => {
   return (
-    <div className="text-primary-light-8 max-w-[1322px] mx-auto">
+    <div className="text-primary-light-8 md:max-w-[1000px] 2xl:max-w-[1322px] mx-auto">
       <HeadPanel />
       <News />
+      <Feature />
+      <AboutUs />
       <Tokenomics />
+      <Team />
     </div>
     // <div className="min-h-0 h-full flex flex-col p-2.5">
     //   <span className="icon-activity-heart text-primary-50 text-2xl"></span>
