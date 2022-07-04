@@ -1,13 +1,11 @@
 import { memo, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import logotwitter from 'assets/images/ic-twiter_swiper.svg'
-import logolinkedln from 'assets/images/ic-linkedIn.svg'
 import 'swiper/css'
 import member1 from 'assets/images/member1.png'
 import 'swiper/css/pagination'
 
 // import required modules
-import { Pagination } from 'swiper'
+import { Pagination, EffectCoverflow } from 'swiper'
 
 export const Team = memo(() => {
   const [activeSlide, setActiveSlide] = useState(1)
@@ -16,15 +14,8 @@ export const Team = memo(() => {
   }
 
   return (
-    <div className="mt-48">
-      <div className=" flex text-center justify-center font-bold text-base tracking-[2px]  uppercase  text-accent-blue">
-        TEAMS
-      </div>
-
-      <div className="mt-4 flex text-center justify-center text-accent-light font-bold text-4xl leading-[52px] ">
-        Meet our team of experts
-      </div>
-      <div className="mt-16 flex items-center justify-center ">
+    <div className="mt-14">
+      {/* <div className="flex items-center justify-center ">
         <div
           className={`bg-accent-dark-1 rounded-[3px] p-5 2xl:p-24 min-w-[65%] max-w-[800px] transition duration-[400ms] ease-in-out ${
             activeSlide === 1
@@ -44,12 +35,7 @@ export const Team = memo(() => {
             experience in the travel industry. With his knowledge and passion,
             Tung oversees all the business activities and operational processes.
           </p>
-          <div className="flex justify-center items-center mt-4 gap-x-8">
-            <img src={logolinkedln} alt="" />
-            <img src={logotwitter} alt="" />
-          </div>
         </div>
-
         <div
           className={`bg-accent-dark-1 rounded-[3px] p-5 2xl:p-24 min-w-[65%] max-w-[800px] transition duration-[400ms] ease-in-out ${
             activeSlide === 2
@@ -71,10 +57,6 @@ export const Team = memo(() => {
             experience in the travel industry. With his knowledge and passion,
             Tung oversees all the business activities and operational processes.
           </p>
-          <div className="flex justify-center items-center mt-4 gap-x-8">
-            <img src={logolinkedln} alt="" />
-            <img src={logotwitter} alt="" />
-          </div>
         </div>
         <div
           className={`bg-accent-dark-1 rounded-[3px] p-5 2xl:p-24 min-w-[65%] max-w-[800px] transition duration-[400ms] ease-in-out ${
@@ -95,10 +77,6 @@ export const Team = memo(() => {
             experience in the travel industry. With his knowledge and passion,
             Tung oversees all the business activities and operational processes.
           </p>
-          <div className="flex justify-center items-center mt-4 gap-x-8">
-            <img src={logolinkedln} alt="" />
-            <img src={logotwitter} alt="" />
-          </div>
         </div>
       </div>
       <ul className="flex items-center justify-center gap-x-2 mt-24">
@@ -126,22 +104,29 @@ export const Team = memo(() => {
             onClick={() => handleChangeSlide(3)}
           ></div>
         </li>
-      </ul>
-      {/* <Swiper
-        spaceBetween={0}
-        slidesPerView={3}
-        centeredSlides={true}
+      </ul> */}
+      <Swiper
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
         pagination={{
           clickable: true,
         }}
         loop={true}
-        modules={[Pagination]}
-        className="max-w-full"
+        modules={[Pagination, EffectCoverflow]}
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={3}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 80,
+          depth: 200,
+          modifier: 1,
+          slideShadows: false,
+        }}
       >
         <SwiperSlide>
-          <div className="bg-accent-dark-1 border-2 border-solid border-accent-blue rounded-[3px] p-24 w-[800px]">
+          <div className="bg-accent-dark-1 border-2 border-solid border-accent-blue rounded-[3px] p-24">
             <img src={member1} className="max-w-full mx-auto" alt="" />
             <p className="text-xl text-primary-light-8 tracking-[0.7px] font-semibold text-center mt-3">
               Tony Ngo
@@ -158,7 +143,7 @@ export const Team = memo(() => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-accent-dark-1 border-2 border-solid border-accent-blue rounded-[3px] p-24 w-[800px]">
+          <div className="bg-accent-dark-1 border-2 border-solid border-accent-blue rounded-[3px] p-24">
             <img src={member1} className="max-w-full mx-auto" alt="" />
             <p className="text-xl text-primary-light-8 tracking-[0.7px] font-semibold text-center mt-3">
               Tony Ngo
@@ -175,7 +160,7 @@ export const Team = memo(() => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-accent-dark-1 border-2 border-solid border-accent-blue rounded-[3px] p-24 w-[800px]">
+          <div className="bg-accent-dark-1 border-2 border-solid border-accent-blue rounded-[3px] p-24">
             <img src={member1} className="max-w-full mx-auto" alt="" />
             <p className="text-xl text-primary-light-8 tracking-[0.7px] font-semibold text-center mt-3">
               Tony Ngo
@@ -191,24 +176,7 @@ export const Team = memo(() => {
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-accent-dark-1 border-2 border-solid border-accent-blue rounded-[3px] p-24 w-[800px]">
-            <img src={member1} className="max-w-full mx-auto" alt="" />
-            <p className="text-xl text-primary-light-8 tracking-[0.7px] font-semibold text-center mt-3">
-              Tony Ngo
-            </p>
-            <p className="text-xs text-[rgba(255,255,255,0.6)] font-bold tracking-[0.5px] mt-3 text-center">
-              CEO
-            </p>
-            <p className="tracking-[0.5px] text-center mt-8">
-              Co-Founder & CEO of TUN Travel. Tung Do has had over 20 years of
-              experience in the travel industry. With his knowledge and passion,
-              Tung oversees all the business activities and operational
-              processes.
-            </p>
-          </div>
-        </SwiperSlide>
-      </Swiper> */}
+      </Swiper>
     </div>
   )
 })
