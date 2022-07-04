@@ -6,9 +6,10 @@ import logoinstagram from 'assets/images/ic-instagram.svg'
 import logocamera from 'assets/images/ic-camera.svg'
 import logotelegram from 'assets/images/ic-telegram.svg'
 import logoyoutube from 'assets/images/ic-youtube.svg'
+
 export const Footer = memo(() => {
   return (
-    <div className="py-8  mt-64 max-w-[1322px] mx-auto">
+    <div className="py-8  mt-48 max-w-[1322px] mx-auto">
       <div className="flex  justify-between">
         <img src={logoFooter} alt="" />
         <div className="flex flex-col mr-16 ">

@@ -5,7 +5,7 @@ export const TokennomicsList = () => {
   const { tokenomics } = useTokenomicsList()
 
   return (
-    <div className="max-h-[800px] overflow-y-auto">
+    <div className="max-h-[700px] flex flex-col gap-y-4 overflow-y-auto">
       <>
         {tokenomics.map((item) => {
           return (

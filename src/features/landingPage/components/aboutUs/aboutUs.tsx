@@ -8,10 +8,10 @@ import Button from 'components/button/button'
 export const AboutUs = memo(() => {
   return (
     <div className="mt-48">
-      <h6 className="text-center text-accent-blue font-bold uppercase">
+      <h6 className=" text-center text-accent-blue font-bold uppercase">
         about us
       </h6>
-      <p className="text-center text-primary-light-8 text-4xl font-bold mt-4">
+      <p className=" text-center text-primary-light-8 text-4xl font-bold mt-4">
         Main Products and Services
       </p>
       <p className="text-center text-primary-light-8 text-[28px] font-semibold leading-9 mt-8">

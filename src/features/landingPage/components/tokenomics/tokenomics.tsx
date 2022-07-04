@@ -3,8 +3,8 @@ import { TokennomicsList } from './components/tokenomicsList/tokenomicsList'
 
 export const Tokenomics = () => {
   return (
-    <div className="mt-32">
-      <div className=" font-bold text-base text-center text-accent-blue">
+    <div className="mt-48">
+      <div className=" font-bold text-base leading-6 text-center text-accent-blue">
         TOKENOMICS
       </div>
       <div className="mt-4 text-center font-bold text-4xl leading-[52px] text-accent-light  capitalize ">

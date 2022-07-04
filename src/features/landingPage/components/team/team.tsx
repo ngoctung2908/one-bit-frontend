@@ -1,5 +1,7 @@
 import { memo, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import logotwitter from 'assets/images/ic-twiter_swiper.svg'
+import logolinkedln from 'assets/images/ic-linkedIn.svg'
 import 'swiper/css'
 import member1 from 'assets/images/member1.png'
 import 'swiper/css/pagination'
@@ -14,8 +16,15 @@ export const Team = memo(() => {
   }
 
   return (
-    <div className="mt-14">
-      <div className="flex items-center justify-center ">
+    <div className="mt-48">
+      <div className=" flex text-center justify-center font-bold text-base tracking-[2px]  uppercase  text-accent-blue">
+        TEAMS
+      </div>
+
+      <div className="mt-4 flex text-center justify-center text-accent-light font-bold text-4xl leading-[52px] ">
+        Meet our team of experts
+      </div>
+      <div className="mt-16 flex items-center justify-center ">
         <div
           className={`bg-accent-dark-1 rounded-[3px] p-5 2xl:p-24 min-w-[65%] max-w-[800px] transition duration-[400ms] ease-in-out ${
             activeSlide === 1
@@ -35,7 +44,12 @@ export const Team = memo(() => {
             experience in the travel industry. With his knowledge and passion,
             Tung oversees all the business activities and operational processes.
           </p>
+          <div className="flex justify-center items-center mt-4 gap-x-8">
+            <img src={logolinkedln} alt="" />
+            <img src={logotwitter} alt="" />
+          </div>
         </div>
+
         <div
           className={`bg-accent-dark-1 rounded-[3px] p-5 2xl:p-24 min-w-[65%] max-w-[800px] transition duration-[400ms] ease-in-out ${
             activeSlide === 2
@@ -57,6 +71,10 @@ export const Team = memo(() => {
             experience in the travel industry. With his knowledge and passion,
             Tung oversees all the business activities and operational processes.
           </p>
+          <div className="flex justify-center items-center mt-4 gap-x-8">
+            <img src={logolinkedln} alt="" />
+            <img src={logotwitter} alt="" />
+          </div>
         </div>
         <div
           className={`bg-accent-dark-1 rounded-[3px] p-5 2xl:p-24 min-w-[65%] max-w-[800px] transition duration-[400ms] ease-in-out ${
@@ -77,6 +95,10 @@ export const Team = memo(() => {
             experience in the travel industry. With his knowledge and passion,
             Tung oversees all the business activities and operational processes.
           </p>
+          <div className="flex justify-center items-center mt-4 gap-x-8">
+            <img src={logolinkedln} alt="" />
+            <img src={logotwitter} alt="" />
+          </div>
         </div>
       </div>
       <ul className="flex items-center justify-center gap-x-2 mt-24">
