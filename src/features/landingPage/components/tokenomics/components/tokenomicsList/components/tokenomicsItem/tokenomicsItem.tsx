@@ -18,7 +18,7 @@ export const TokenomicsItem = memo((props: TokenomicsItemProps) => {
         </h5>
         <p className="mt-2 font-normal text-xs">{props.description}</p>
       </div>
-      <div className="flex flex-col box-border  gap-y-2 text-xs text-primary-light-8 w-[80px]">
+      <div className="flex flex-col box-border text-xs text-primary-light-8 w-[80px]">
         <h5 className="">Tokens</h5>
         <p className=" mt-2">
           {props.token.toLocaleString('it-IT', {
