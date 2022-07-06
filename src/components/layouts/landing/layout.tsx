@@ -7,7 +7,7 @@ import { Partner } from 'components/partner/partner'
 export const Layout = () => {
   return (
     <div className="min-h-screen flex relative">
-      <div className="min-h-screen flex relative overflow-x-hidden">
+      <div className="min-h-screen flex relative overflow-x-hidden w-full">
         <Sider />
         <div className="flex-1 p-8">
           <Nav />
