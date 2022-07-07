@@ -9,11 +9,11 @@ export const Layout = () => {
     <div className="min-h-screen flex relative">
       <div className="min-h-screen flex relative overflow-x-hidden w-full">
         <Sider />
-        <div className="flex-1 p-8">
+        <div className="block sm:flex-1 p-4 sm:p-8">
           <Nav />
           <Outlet />
-          <Partner />
-          <Footer />
+          {/* <Partner />
+          <Footer /> */}
         </div>
       </div>
     </div>

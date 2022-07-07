@@ -3,10 +3,10 @@ import { memo } from 'react'
 export const HeadIntro = memo(() => {
   return (
     <div className="flex flex-col justify-center">
-      <h1 className="text-primary-light-8 text-[56px] leading-[72px] font-bold">
+      <h1 className="text-primary-light-8 text-[34px] leading-[40px] sm:text-[56px] sm:leading-[72px] font-bold">
         Invest to create real values
       </h1>
-      <p className="text-accent-light leading-8 mt-8">
+      <p className="text-accent-light mt-8">
         Onebit Ventures hoạt động với tư cách quỹ chuyên đầu tư, tư vấn, ươm tạo
         và hỗ trợ sự phát triển của các công ty và dự án mới thành lập.
       </p>
