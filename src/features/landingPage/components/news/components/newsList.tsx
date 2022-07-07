@@ -3,16 +3,17 @@ import { useNewsList } from './useNewsList'
 export const NewsList = () => {
   const { news } = useNewsList()
   return (
-    <div className="snap-x snap-mandatory overflow-x-auto flex gap-x-4 max-w-[866px] ">
+    <>
       {news.map((item) => {
         return (
           <NewsItem
+            key={item.thumnail}
             thumnail={item.thumnail}
             title={item.title}
             shortDescription={item.shortDescription}
           />
         )
       })}
-    </div>
+    </>
   )
 }

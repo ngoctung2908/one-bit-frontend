@@ -9,8 +9,8 @@ type NewProps = {
 }
 export const NewsItem = memo((props: NewProps) => {
   return (
-    <div className="snap-start min-w-[278px] max-w-[278px]">
-      <img src={props.thumnail} alt="" />
+    <div className="snap-start min-w-[278px]   max-w-[278px]">
+      <img className="w-[278px] h-[178px]" src={props.thumnail} alt="" />
       <Link
         to=""
         className="text-primary-light-8 font-semibold text-xl mt-8 tracking-[0.7px] inline-block line-clamp-2"
