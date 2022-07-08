@@ -5,8 +5,8 @@ import smallLogoSvg from 'assets/images/small-logo.svg'
 import { useSider } from './useSider'
 
 export const Sider = memo(() => {
-  const { handleCloseSider, isShowSider } = useSider()
-
+  const { handleExpandMenu, handleCloseSider, isShowSider, isShowMenu } =
+    useSider()
   return (
     <div>
       <div
@@ -176,15 +176,35 @@ export const Sider = memo(() => {
             </Link>
           </li>
           <li className="py-2">
-            <Link
-              to="/advertising"
-              className="flex flex-col gap-y-2 text-[8px] uppercase text-neutral-7 justify-center items-center"
+            <button
+              onClick={handleExpandMenu}
+              className="flex flex-col gap-y-2 text-[8px] uppercase text-neutral-7 justify-center items-center w-full"
             >
               <span className="icon-menu-01 text-2xl"></span>
               Menu
-            </Link>
+            </button>
           </li>
         </ul>
+        <div
+          className={`absolute top-0 right-0 -translate-y-full bg-accent-dark-2 transition-all duration-500 ease-linear ${
+            !isShowMenu ? 'max-h-0 overflow-hidden' : 'max-h-80'
+          }`}
+        >
+          <ul className="text-neutral-7 p-2">
+            <li className="flex  gap-x-2 p-2 text-[8px] uppercase text-neutral-7  items-center">
+              <span className="icon-shield-dollar text-2xl"></span>
+              Insurance
+            </li>
+            <li className="flex  gap-x-2 p-2 text-[8px] uppercase text-neutral-7  items-center">
+              <span className="icon-coins-stacked-02 text-2xl"></span>
+              Stake
+            </li>
+            <li className="flex  gap-x-2 p-2 text-[8px] uppercase text-neutral-7  items-center">
+              <span className="icon-user-01 text-2xl"></span>
+              User
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   )

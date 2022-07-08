@@ -19,10 +19,14 @@ export const AboutUs = memo(() => {
         thái Onebit tiếp cận với các nền tảng đầu tư theo cách dễ dàng nhất, an
         toàn nhất và hiệu quả nhất.
       </p>
-      <div className="flex gap-x-24 mt-28 items-center">
-        <img src={launchPadPng} className="max-w-[530px]" alt="" />
+      <div className="flex md:flex-row flex-col md:gap-y-24 gap-y-0 md:gap-x-24 mt-28 items-center">
+        <img
+          src={launchPadPng}
+          className="md:max-w-[530px] max-w-[200px] "
+          alt=""
+        />
         <div>
-          <h6 className="text-[32px] text-accent-light leading-[40px]">
+          <h6 className="text-[32px] text-accent-light text-center leading-[40px]">
             ONEBIT Startup Launchpad
           </h6>
           <p className="text-primary-light-8 tracking-[0.5px] mt-8">
@@ -35,14 +39,14 @@ export const AboutUs = memo(() => {
             chính và đảm bảo cho các quỹ đầu tư giảm thiểu được rui ro khi đầu
             tư.
           </p>
-          <Button size="sm" className="mt-8">
+          <Button size="sm" className="mt-8  md:mr-auto mx-auto">
             More Detail
           </Button>
         </div>
       </div>
-      <div className="flex gap-x-24 mt-28 items-center">
+      <div className="flex md:flex-row flex-col gap-y-24 md:gap-y-0 md:gap-x-24 mt-28 items-center">
         <div className="text-right">
-          <h6 className="text-[32px] text-accent-light leading-[40px]">
+          <h6 className="text-[32px] text-accent-light text-center leading-[40px]">
             ONEBIT Crypto Insurance
           </h6>
           <p className="text-primary-light-8 tracking-[0.5px] mt-8">
@@ -53,16 +57,24 @@ export const AboutUs = memo(() => {
             ngay cả khi thị trường biến động miễn là còn trong thời hạn hợp
             đồng.
           </p>
-          <Button size="sm" className="mt-8 ml-auto">
+          <Button size="sm" className="mt-8 ml-auto mx-auto">
             More Detail
           </Button>
         </div>
-        <img src={insurancePng} className="max-w-[473px]" alt="" />
+        <img
+          src={insurancePng}
+          className="md:max-w-[473px] max-w-[200px]"
+          alt=""
+        />
       </div>
-      <div className="flex gap-x-24 mt-28 items-center">
-        <img src={incubatorePng} className="max-w-[530px]" alt="" />
+      <div className="flex md:flex-row flex-col gap-y-24 md:gap-y-0 md:gap-x-24 mt-28 items-center">
+        <img
+          src={incubatorePng}
+          className="md:max-w-[530px] max-w-[200px]"
+          alt=""
+        />
         <div>
-          <h6 className="text-[32px] text-accent-light leading-[40px]">
+          <h6 className="text-[32px] text-center text-accent-light leading-[40px]">
             ONEBIT Incubator
           </h6>
           <p className="text-primary-light-8 tracking-[0.5px] mt-8">
@@ -72,14 +84,14 @@ export const AboutUs = memo(() => {
             giải pháp kinh doanh, pháp lý.... đây là những sự hỗ trợ tốt nhất để
             một dự án có thể phát triển.
           </p>
-          <Button size="sm" className="mt-8">
+          <Button size="sm" className="mt-8 md:mr-auto mx-auto">
             More Detail
           </Button>
         </div>
       </div>
-      <div className="flex gap-x-24 mt-28 items-center">
+      <div className="flex md:flex-row flex-col gap-y-24 md:gap-y-0 md:gap-x-24 mt-28 items-center">
         <div className="text-right">
-          <h6 className="text-[32px] text-accent-light leading-[40px]">
+          <h6 className="text-[32px] text-center text-accent-light leading-[40px]">
             ONEBIT Crypto Advertising
           </h6>
           <p className="text-primary-light-8 tracking-[0.5px] mt-8">
@@ -90,11 +102,15 @@ export const AboutUs = memo(() => {
             giải pháp truyền thông phù hợp cho dự án phát triển và tiếp cận được
             cộng đồng tiềm năng.
           </p>
-          <Button size="sm" className="mt-8 ml-auto">
+          <Button size="sm" className="mt-8  md:ml-auto mx-auto">
             More Detail
           </Button>
         </div>
-        <img src={vestingPng} className="max-w-[473px]" alt="" />
+        <img
+          src={vestingPng}
+          className="md:max-w-[473px] max-w-[200px]"
+          alt=""
+        />
       </div>
     </div>
   )
