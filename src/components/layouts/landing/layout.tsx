@@ -10,21 +10,21 @@ export const Layout = () => {
   return (
     <div
       className="min-h-screen flex relative pb-24 md:pb-0 bg-no-repeat"
-      style={{
-        backgroundImage: `url(${topBgPng})`,
-        backgroundPositionX: 'right',
-        backgroundPositionY: 'calc(100vh - 313px)',
-        backgroundSize: '100% auto',
-      }}
+      // style={{
+      //   backgroundImage: `url(${topBgPng})`,
+      //   backgroundPositionX: 'right',
+      //   backgroundPositionY: 'calc(100vh - 313px)',
+      //   backgroundSize: '100% auto',
+      // }}
     >
       <div
         className="min-h-screen flex relative overflow-x-hidden w-full bg-no-repeat"
-        style={{
-          backgroundImage: `url(${bottomBgPng})`,
-          backgroundPositionX: 'center',
-          backgroundPositionY: 'bottom',
-          backgroundSize: '100% auto',
-        }}
+        // style={{
+        //   backgroundImage: `url(${bottomBgPng})`,
+        //   backgroundPositionX: 'center',
+        //   backgroundPositionY: 'bottom',
+        //   backgroundSize: '100% auto',
+        // }}
       >
         <Sider />
         <div className="block sm:flex-1 p-4 sm:p-8">

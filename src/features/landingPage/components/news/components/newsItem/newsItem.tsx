@@ -9,7 +9,7 @@ type NewProps = {
 }
 export const NewsItem = memo((props: NewProps) => {
   return (
-    <div className="snap-start min-w-[278px]   max-w-[278px]">
+    <div className="snap-start min-w-[278px] max-w-[278px]">
       <img className="w-[278px] h-[178px]" src={props.thumnail} alt="" />
       <Link
         to=""
