@@ -7,8 +7,8 @@ import logoMicrosoft from 'assets/images/logo-microsoft.svg'
 
 export const Partner = memo(() => {
   return (
-    <div className="mt-48 flex flex-col justify-center items-center">
-      <div className="flex py-11  gap-x-14  items-center justify-center border-y border-accent-dark-2 border-solid   ">
+    <div className="mt-24 md:mt-48 flex flex-col justify-center items-center">
+      <div className="flex py-11 gap-x-14 snap-x snap-mandatory items-center justify-center overflow-x-auto border-y border-accent-dark-2 border-solid">
         <img src={logoGithub} alt="" />
         <img src={logoForbes} alt="" />
         <img src={logoGoogle} alt="" />

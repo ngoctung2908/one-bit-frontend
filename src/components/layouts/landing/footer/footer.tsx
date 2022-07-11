@@ -9,9 +9,12 @@ import logoyoutube from 'assets/images/ic-youtube.svg'
 
 export const Footer = memo(() => {
   return (
-    <div className="py-8  mt-48 max-w-[1322px] mx-auto">
-      <div className="flex  justify-between">
+    <div className="pt-8 mt-24 md:mt-48 max-w-[1322px] mx-auto">
+      <div className="flex flex-col gap-y-8 md:gap-y-0 md:flex-row justify-between">
         <img src={logoFooter} alt="" />
+        <h5 className="text-accent-light text-base md:hidden">
+          134 7th street, Go Vap District, Ho Chi Minh City, Vietnam
+        </h5>
         <div className="flex flex-col mr-16 ">
           <h6 className="text-accent-light text-xl  tracking-[0.7px]">
             Join Our Comunity
@@ -27,10 +30,10 @@ export const Footer = memo(() => {
         </div>
       </div>
       <div className="flex justify-between mt-8">
-        <h5 className="text-accent-light text-base ">
+        <h5 className="text-accent-light text-base hidden md:block">
           134 7th street, Go Vap District, Ho Chi Minh City, Vietnam
         </h5>
-        <div className="text-neutral-6">
+        <div className="text-neutral-6 text-center md:text-left">
           Copyright © 2022 Onebit Ventures. All Rights Reserved.
         </div>
       </div>

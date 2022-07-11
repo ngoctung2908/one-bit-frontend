@@ -8,25 +8,25 @@ import Button from 'components/button/button'
 export const AboutUs = memo(() => {
   return (
     <div className="mt-48">
-      <h6 className=" text-center text-accent-blue font-bold uppercase">
+      <h6 className="text-center text-sm md:text-base text-accent-blue font-bold uppercase">
         about us
       </h6>
-      <p className=" text-center text-primary-light-8 text-4xl font-bold mt-4">
+      <p className="text-center text-primary-light-8 leading-10 text-[32px] md:text-4xl font-bold mt-4">
         Main Products and Services
       </p>
-      <p className="text-center text-primary-light-8 text-[28px] font-semibold leading-9 mt-8">
+      <p className="text-center text-primary-light-8 text-lg md:text-[28px] font-semibold leading-9 mt-8">
         Chúng tôi vô cùng tự hào khi được giúp đỡ các thành viên trong hệ sinh
         thái Onebit tiếp cận với các nền tảng đầu tư theo cách dễ dàng nhất, an
         toàn nhất và hiệu quả nhất.
       </p>
-      <div className="flex md:flex-row flex-col md:gap-y-24 gap-y-0 md:gap-x-24 mt-28 items-center">
+      <div className="flex md:flex-row flex-col md:gap-y-0 gap-y-12 md:gap-x-24 mt-28 items-center">
         <img
           src={launchPadPng}
-          className="md:max-w-[530px] max-w-[200px] "
+          className="md:max-w-[530px] max-w-[283px] "
           alt=""
         />
         <div>
-          <h6 className="text-[32px] text-accent-light text-center leading-[40px]">
+          <h6 className="text-2xl leading-8 md:text-[32px] text-accent-light md:text-center md:leading-[40px]">
             ONEBIT Startup Launchpad
           </h6>
           <p className="text-primary-light-8 tracking-[0.5px] mt-8">
@@ -44,9 +44,9 @@ export const AboutUs = memo(() => {
           </Button>
         </div>
       </div>
-      <div className="flex md:flex-row flex-col gap-y-24 md:gap-y-0 md:gap-x-24 mt-28 items-center">
-        <div className="text-right">
-          <h6 className="text-[32px] text-accent-light text-center leading-[40px]">
+      <div className="flex md:flex-row flex-col md:gap-y-0 gap-y-12 md:gap-x-24 mt-28 items-center">
+        <div className="text-left md:text-right order-2 md:order-none">
+          <h6 className="text-2xl leading-8 md:text-[32px] text-accent-light md:text-center md:leading-[40px]">
             ONEBIT Crypto Insurance
           </h6>
           <p className="text-primary-light-8 tracking-[0.5px] mt-8">
@@ -63,18 +63,18 @@ export const AboutUs = memo(() => {
         </div>
         <img
           src={insurancePng}
-          className="md:max-w-[473px] max-w-[200px]"
+          className="md:max-w-[530px] max-w-[283px] order-1 md:order-none"
           alt=""
         />
       </div>
-      <div className="flex md:flex-row flex-col gap-y-24 md:gap-y-0 md:gap-x-24 mt-28 items-center">
+      <div className="flex md:flex-row flex-col md:gap-y-0 gap-y-12 md:gap-x-24 mt-28 items-center">
         <img
           src={incubatorePng}
-          className="md:max-w-[530px] max-w-[200px]"
+          className="md:max-w-[530px] max-w-[283px]"
           alt=""
         />
         <div>
-          <h6 className="text-[32px] text-center text-accent-light leading-[40px]">
+          <h6 className="text-2xl leading-8 md:text-[32px] text-accent-light md:text-center md:leading-[40px]">
             ONEBIT Incubator
           </h6>
           <p className="text-primary-light-8 tracking-[0.5px] mt-8">
@@ -89,9 +89,9 @@ export const AboutUs = memo(() => {
           </Button>
         </div>
       </div>
-      <div className="flex md:flex-row flex-col gap-y-24 md:gap-y-0 md:gap-x-24 mt-28 items-center">
-        <div className="text-right">
-          <h6 className="text-[32px] text-center text-accent-light leading-[40px]">
+      <div className="flex md:flex-row flex-col md:gap-y-0 gap-y-12 md:gap-x-24 mt-28 items-center">
+        <div className="text-left md:text-right order-2 md:order-none">
+          <h6 className="text-2xl leading-8 md:text-[32px] text-accent-light md:text-center md:leading-[40px]">
             ONEBIT Crypto Advertising
           </h6>
           <p className="text-primary-light-8 tracking-[0.5px] mt-8">
@@ -108,7 +108,7 @@ export const AboutUs = memo(() => {
         </div>
         <img
           src={vestingPng}
-          className="md:max-w-[473px] max-w-[200px]"
+          className="md:max-w-[530px] max-w-[283px] order-1 md:order-none"
           alt=""
         />
       </div>

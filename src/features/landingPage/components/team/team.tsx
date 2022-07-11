@@ -14,10 +14,16 @@ export const Team = memo(() => {
   }
 
   return (
-    <div className="mt-14">
-      {/* <div className="flex items-center justify-center ">
+    <div className="mt-14 max-w-[calc(100vw-32px)]">
+      <h6 className="text-center text-sm md:text-base text-accent-blue font-bold uppercase">
+        teams
+      </h6>
+      <p className="text-center text-primary-light-8 leading-10 text-[32px] md:text-4xl font-bold mt-4">
+        Meet our team of experts
+      </p>
+      <div className="flex items-center justify-center mt-8 ">
         <div
-          className={`bg-accent-dark-1 rounded-[3px] p-5 2xl:p-24 min-w-[65%] max-w-[800px] transition duration-[400ms] ease-in-out ${
+          className={`bg-accent-dark-1 rounded-[3px] p-5 2xl:p-24 min-w-[70%] max-w-[800px] transition duration-[400ms] ease-in-out ${
             activeSlide === 1
               ? 'order-2 border-2 border-solid border-accent-blue z-20'
               : 'order-1 scale-50 translate-x-1/2'
@@ -37,7 +43,7 @@ export const Team = memo(() => {
           </p>
         </div>
         <div
-          className={`bg-accent-dark-1 rounded-[3px] p-5 2xl:p-24 min-w-[65%] max-w-[800px] transition duration-[400ms] ease-in-out ${
+          className={`bg-accent-dark-1 rounded-[3px] p-5 2xl:p-24 min-w-[70%] max-w-[800px] transition duration-[400ms] ease-in-out ${
             activeSlide === 2
               ? 'order-2 border-2 border-solid border-accent-blue z-20'
               : activeSlide === 3
@@ -59,7 +65,7 @@ export const Team = memo(() => {
           </p>
         </div>
         <div
-          className={`bg-accent-dark-1 rounded-[3px] p-5 2xl:p-24 min-w-[65%] max-w-[800px] transition duration-[400ms] ease-in-out ${
+          className={`bg-accent-dark-1 rounded-[3px] p-5 2xl:p-24 min-w-[70%] max-w-[800px] transition duration-[400ms] ease-in-out ${
             activeSlide === 3
               ? 'order-2 border-2 border-solid border-accent-blue z-20'
               : 'order-3 scale-50 -translate-x-1/2'
@@ -79,7 +85,7 @@ export const Team = memo(() => {
           </p>
         </div>
       </div>
-      <ul className="flex items-center justify-center gap-x-2 mt-24">
+      <ul className="flex items-center justify-center gap-x-2 mt-8 md:mt-24">
         <li>
           <div
             className={`w-2.5 h-2.5 bg-primary-light-8 rounded-full cursor-pointer ${
@@ -104,8 +110,8 @@ export const Team = memo(() => {
             onClick={() => handleChangeSlide(3)}
           ></div>
         </li>
-      </ul> */}
-      <Swiper
+      </ul>
+      {/* <Swiper
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
         pagination={{
@@ -176,7 +182,7 @@ export const Team = memo(() => {
             </p>
           </div>
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
     </div>
   )
 })

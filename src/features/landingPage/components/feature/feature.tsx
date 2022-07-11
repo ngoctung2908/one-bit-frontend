@@ -7,10 +7,10 @@ import valueSvg from 'assets/images/value.svg'
 export const Feature = memo(() => {
   return (
     <div className="mt-48">
-      <h6 className="text-center text-accent-blue font-bold uppercase">
+      <h6 className="text-center text-sm md:text-base text-accent-blue font-bold uppercase">
         features
       </h6>
-      <p className="text-center text-primary-light-8 text-4xl font-bold mt-4">
+      <p className="text-center text-primary-light-8 leading-10 text-[32px] md:text-4xl font-bold mt-4">
         Why choose Onebit
       </p>
       <div className="mt-16 flex flex-col gap-y-4 md:gap-y-0 md:flex-row md:gap-x-4">

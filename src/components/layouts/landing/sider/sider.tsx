@@ -10,7 +10,7 @@ export const Sider = memo(() => {
   return (
     <div>
       <div
-        className={`pl-6 pr-4 py-8 border-solid border-neutral-8 hidden sm:block border-r-[0.5px] items-stretch relative top-0 left-0 transition-all ${
+        className={`pl-6 pr-4 py-8 border-solid border-neutral-8 hidden md:block border-r-[0.5px] items-stretch relative top-0 left-0 transition-all md:h-full ${
           isShowSider ? '2xl:w-[323px] w-[270px]' : 'w-[128px]'
         }`}
       >
@@ -146,7 +146,7 @@ export const Sider = memo(() => {
           </li>
         </ul>
       </div>
-      <div className="fixed bottom-0 left-0 w-full h-auto bg-accent-dark-2 sm:hidden">
+      <div className="fixed bottom-0 left-0 w-full h-auto bg-accent-dark-2 md:hidden">
         <ul className="grid grid-cols-4 gap-x-4">
           <li className="py-2">
             <Link

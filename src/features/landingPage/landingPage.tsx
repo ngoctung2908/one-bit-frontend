@@ -11,11 +11,11 @@ export const LandingPage: FC = memo(() => {
   return (
     <div className="text-primary-light-8 md:max-w-[1000px] 2xl:max-w-[1322px] mx-auto">
       <HeadPanel />
-      {/* <News /> */}
+      <News />
       <Feature />
       <AboutUs />
-      {/* <Tokenomics />
-      <Team />  */}
+      <Tokenomics />
+      <Team />
     </div>
     // <div className="min-h-0 h-full flex flex-col p-2.5">
     //   <span className="icon-activity-heart text-primary-50 text-2xl"></span>
