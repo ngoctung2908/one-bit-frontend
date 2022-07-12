@@ -39,7 +39,7 @@ export const AboutUs = memo(() => {
             chính và đảm bảo cho các quỹ đầu tư giảm thiểu được rui ro khi đầu
             tư.
           </p>
-          <Button size="sm" className="mt-8  md:mr-auto mx-auto">
+          <Button size="sm" className="mt-8  mx-auto md:ml-0">
             More Detail
           </Button>
         </div>
@@ -57,7 +57,7 @@ export const AboutUs = memo(() => {
             ngay cả khi thị trường biến động miễn là còn trong thời hạn hợp
             đồng.
           </p>
-          <Button size="sm" className="mt-8 ml-auto mx-auto">
+          <Button size="sm" className="mt-8 mx-auto  md:mr-0">
             More Detail
           </Button>
         </div>
@@ -84,7 +84,7 @@ export const AboutUs = memo(() => {
             giải pháp kinh doanh, pháp lý.... đây là những sự hỗ trợ tốt nhất để
             một dự án có thể phát triển.
           </p>
-          <Button size="sm" className="mt-8 md:mr-auto mx-auto">
+          <Button size="sm" className="mt-8 mx-auto md:ml-0">
             More Detail
           </Button>
         </div>
@@ -102,7 +102,7 @@ export const AboutUs = memo(() => {
             giải pháp truyền thông phù hợp cho dự án phát triển và tiếp cận được
             cộng đồng tiềm năng.
           </p>
-          <Button size="sm" className="mt-8  md:ml-auto mx-auto">
+          <Button size="sm" className="mt-8 mx-auto md:mr-0 ">
             More Detail
           </Button>
         </div>

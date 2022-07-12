@@ -112,7 +112,7 @@ export const Sider = memo(() => {
               </span>
             </Link>
           </li>
-          <li className="pl-8 py-[18px] relative group hover:before:menu-before hover:bg-linear-gradient rounded-lg transition ease-in-out duration-200">
+          <li className="pl-8 py-[18px] relative group hover:before:menu-before hover:bg-linear-gradient rounded-lg transition ease-in-out duration-200 ">
             <Link
               to="/"
               className="text-neutral-7 group-hover:text-primary-light-8 font-bold flex items-center gap-x-8"
@@ -148,10 +148,10 @@ export const Sider = memo(() => {
       </div>
       <div className="fixed bottom-0 left-0 w-full h-auto bg-accent-dark-2 md:hidden">
         <ul className="grid grid-cols-4 gap-x-4">
-          <li className="py-2">
+          <li className="py-2 bg-accent-dark-1 relative before:mobile-menu-before rounded-lg transition ease-in-out duration-200">
             <Link
               to="/launch"
-              className="flex flex-col gap-y-2 text-[8px] uppercase text-neutral-7 justify-center items-center"
+              className="flex flex-col gap-y-2 text-[8px] uppercase text-neutral-7 justify-center items-center "
             >
               <span className="icon-presentation-chart-02 text-2xl"></span>
               Launchpad
@@ -175,14 +175,25 @@ export const Sider = memo(() => {
               Advertising
             </Link>
           </li>
+
           <li className="py-2">
-            <button
-              onClick={handleExpandMenu}
-              className="flex flex-col gap-y-2 text-[8px] uppercase text-neutral-7 justify-center items-center w-full"
-            >
-              <span className="icon-menu-01 text-2xl"></span>
-              Menu
-            </button>
+            {isShowMenu ? (
+              <button
+                onClick={handleExpandMenu}
+                className="flex flex-col gap-y-2 text-[8px] uppercase text-neutral-7 justify-center items-center w-full"
+              >
+                <span className="icon-x-close text-2xl"></span>
+                Close
+              </button>
+            ) : (
+              <button
+                onClick={handleExpandMenu}
+                className="flex flex-col gap-y-2 text-[8px] uppercase text-neutral-7 justify-center items-center w-full"
+              >
+                <span className="icon-menu-01 text-2xl"></span>
+                Menu
+              </button>
+            )}
           </li>
         </ul>
         <div
