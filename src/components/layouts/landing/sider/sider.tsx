@@ -6,8 +6,8 @@ import { useSider } from './useSider'
 import type { LinkProps } from 'react-router-dom'
 
 const CustomLink = ({ children, to, ...props }: LinkProps) => {
-  let resolved = useResolvedPath(to)
-  let match = useMatch({ path: resolved.pathname, end: true })
+  const resolved = useResolvedPath(to)
+  const match = useMatch({ path: resolved.pathname, end: true })
 
   return (
     <li
@@ -27,7 +27,44 @@ const CustomLink = ({ children, to, ...props }: LinkProps) => {
     </li>
   )
 }
+const CustomLinkMobile = ({ children, to, type, ...props }: LinkProps) => {
+  const resolved = useResolvedPath(to)
+  const match = useMatch({ path: resolved.pathname, end: true })
 
+  return type === '1' ? (
+    <li
+      className={
+        match
+          ? 'py-2 bg-accent-dark-1 relative before:mobile-menu-before rounded-lg '
+          : 'py-2 '
+      }
+    >
+      <Link
+        to={to}
+        {...props}
+        className="flex flex-col gap-y-2 text-[8px] uppercase text-neutral-7 justify-center items-center"
+      >
+        {children}
+      </Link>
+    </li>
+  ) : (
+    <li
+      className={
+        match
+          ? ' py-2 bg-accent-dark-1 relative before:mobile-menu-navbar-before rounded-lg '
+          : 'py-2 '
+      }
+    >
+      <Link
+        to={to}
+        {...props}
+        className="flex  gap-x-2 p-2 text-[8px] uppercase text-neutral-7  items-center"
+      >
+        {children}
+      </Link>
+    </li>
+  )
+}
 export const Sider = memo(() => {
   const { handleExpandMenu, handleCloseSider, isShowSider, isShowMenu } =
     useSider()
@@ -138,33 +175,18 @@ export const Sider = memo(() => {
       </div>
       <div className="fixed bottom-0 left-0 w-full h-auto bg-accent-dark-2 md:hidden">
         <ul className="grid grid-cols-4 gap-x-4">
-          <li className="py-2 bg-accent-dark-1 relative before:mobile-menu-before rounded-lg transition ease-in-out duration-200">
-            <Link
-              to="/launchpad"
-              className="flex flex-col gap-y-2 text-[8px] uppercase text-neutral-7 justify-center items-center "
-            >
-              <span className="icon-presentation-chart-02 text-2xl"></span>
-              Launchpad
-            </Link>
-          </li>
-          <li className="py-2">
-            <Link
-              to="/incubator"
-              className="flex flex-col gap-y-2 text-[8px] uppercase text-neutral-7 justify-center items-center"
-            >
-              <span className="icon-rocket-02 text-2xl"></span>
-              Incubator
-            </Link>
-          </li>
-          <li className="py-2">
-            <Link
-              to="/advertising"
-              className="flex flex-col gap-y-2 text-[8px] uppercase text-neutral-7 justify-center items-center"
-            >
-              <span className="icon-server-06 text-2xl"></span>
-              Advertising
-            </Link>
-          </li>
+          <CustomLinkMobile to="/launchpad" type="1">
+            <span className="icon-presentation-chart-02 text-2xl"></span>
+            Launchpad
+          </CustomLinkMobile>
+          <CustomLinkMobile to="/incubator" type="1">
+            <span className="icon-rocket-02 text-2xl"></span>
+            Incubator
+          </CustomLinkMobile>
+          <CustomLinkMobile to="/advertising" type="1">
+            <span className="icon-server-06 text-2xl"></span>
+            Advertising
+          </CustomLinkMobile>
 
           <li className="py-2">
             {isShowMenu ? (
@@ -192,18 +214,18 @@ export const Sider = memo(() => {
           }`}
         >
           <ul className="text-neutral-7 p-2">
-            <li className="flex  gap-x-2 p-2 text-[8px] uppercase text-neutral-7  items-center">
+            <CustomLinkMobile to="/insurance" type="2">
               <span className="icon-shield-dollar text-2xl"></span>
               Insurance
-            </li>
-            <li className="flex  gap-x-2 p-2 text-[8px] uppercase text-neutral-7  items-center">
+            </CustomLinkMobile>
+            <CustomLinkMobile to="/stake" type="2">
               <span className="icon-coins-stacked-02 text-2xl"></span>
               Stake
-            </li>
-            <li className="flex  gap-x-2 p-2 text-[8px] uppercase text-neutral-7  items-center">
+            </CustomLinkMobile>
+            <CustomLinkMobile to="/user" type="2">
               <span className="icon-user-01 text-2xl"></span>
               User
-            </li>
+            </CustomLinkMobile>
           </ul>
         </div>
       </div>
